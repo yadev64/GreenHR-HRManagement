@@ -10,7 +10,9 @@ namespace WebApplication1
 {
     public class bal
     {
+        managerreq mgr;
         dal d = new dal();
+        List<managerreq> ls = new List<managerreq>();
         public bool Rec(userentity usr)
         {
             bool x = false;
@@ -28,6 +30,22 @@ namespace WebApplication1
         public void storereq(managerreq mgr)
         {
             d.store(mgr);
+        }
+        public List<managerreq> record(managerreq mgr)
+        {
+            DataTable dt=d.status(mgr);
+            for(int i = 0; i < dt.Rows.Count; i++)
+            {
+                mgr = new managerreq();
+                mgr.reqid = Convert.ToInt32(dt.Rows[i].ItemArray[8].ToString());
+                mgr.status = dt.Rows[i].ItemArray[9].ToString();
+                mgr.prjname = dt.Rows[i].ItemArray[1].ToString();
+                mgr.date =Convert.ToDateTime( dt.Rows[i].ItemArray[10].ToString());
+                ls.Add(mgr);
+
+
+            }
+            return ls;
         }
     }
 }

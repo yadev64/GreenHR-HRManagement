@@ -4,6 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Data;
 using System.Data.SqlClient;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
 
 
 namespace WebApplication1
@@ -43,13 +46,16 @@ namespace WebApplication1
             cmd.ExecuteNonQuery();
             con.Close();
         }
-        public DataTable status()
+        public DataTable status(managerreq mgr)
         {
             con.Open();
-            SqlCommand cmd = new SqlCommand("select * from request_table", con);
+            SqlCommand cmd = new SqlCommand("select req_id,reqstatus,project_name,date_request from request_table where manager_name=" + mgr + "", con);
+            //SqlCommand cmd = new SqlCommand("select * from request_table",con);
             SqlDataReader rdr = cmd.ExecuteReader();
             DataTable dt = new DataTable();
+            
             dt.Load(rdr);
+            
             con.Close();
             return dt;
         }
