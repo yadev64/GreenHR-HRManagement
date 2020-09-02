@@ -31,17 +31,23 @@ namespace WebApplication1
         {
             d.store(mgr);
         }
-        public List<managerreq> record(managerreq mgr)
+        public List<managerreq> record(string name)
         {
-            DataTable dt=d.status(mgr);
+            DataTable dt=d.status();
             for(int i = 0; i < dt.Rows.Count; i++)
             {
                 mgr = new managerreq();
-                mgr.reqid = Convert.ToInt32(dt.Rows[i].ItemArray[8].ToString());
-                mgr.status = dt.Rows[i].ItemArray[9].ToString();
-                mgr.prjname = dt.Rows[i].ItemArray[1].ToString();
-                mgr.date =Convert.ToDateTime( dt.Rows[i].ItemArray[10].ToString());
-                ls.Add(mgr);
+                if (dt.Rows[i].ItemArray[0].ToString() == name)
+                {
+                    mgr.reqid = Convert.ToInt32(dt.Rows[i].ItemArray[8].ToString());
+                    mgr.status = dt.Rows[i].ItemArray[9].ToString();
+                    mgr.prjname = dt.Rows[i].ItemArray[1].ToString();
+                    mgr.date = Convert.ToDateTime(dt.Rows[i].ItemArray[10].ToString());
+                    ls.Add(mgr);
+
+
+                }
+
 
 
             }

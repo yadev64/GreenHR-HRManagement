@@ -58,7 +58,6 @@
                     </asp:GridView>
                     <asp:GridView ID="GridView2" runat="server">
                     </asp:GridView>
-                    <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Button" />
                 </td>
             </tr>
             <tr>

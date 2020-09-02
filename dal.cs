@@ -46,11 +46,11 @@ namespace WebApplication1
             cmd.ExecuteNonQuery();
             con.Close();
         }
-        public DataTable status(managerreq mgr)
+        public DataTable status()
         {
             con.Open();
-            SqlCommand cmd = new SqlCommand("select req_id,reqstatus,project_name,date_request from request_table where manager_name=" + mgr + "", con);
-            //SqlCommand cmd = new SqlCommand("select * from request_table",con);
+            SqlCommand cmd = new SqlCommand("select * from request_table", con);
+            
             SqlDataReader rdr = cmd.ExecuteReader();
             DataTable dt = new DataTable();
             
