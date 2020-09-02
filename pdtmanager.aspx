@@ -48,8 +48,17 @@
                     <br />
                 </td>
                 <td class="auto-style3">
-                    <asp:GridView ID="GridView1" runat="server" Height="190px" Width="289px">
+                    <asp:GridView ID="GridView1" runat="server" Height="269px" Width="421px" AutoGenerateColumns="False">
+                        <Columns>
+                            <asp:BoundField DataField="req_id" HeaderText="Reqid" />
+                            <asp:BoundField DataField="reqstatus" HeaderText="Status" />
+                            <asp:BoundField DataField="project_name" HeaderText="Project Name" />
+                            <asp:BoundField DataField="date_request" HeaderText="Date" />
+                        </Columns>
                     </asp:GridView>
+                    <asp:GridView ID="GridView2" runat="server">
+                    </asp:GridView>
+                    <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Button" />
                 </td>
             </tr>
             <tr>
