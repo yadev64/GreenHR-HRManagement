@@ -23,7 +23,14 @@ namespace WebApplication1
             Session["UserName"] =username;
             Label1.Text = Session["UserName"] as string;
 
-            
+            mgr = new managerreq();
+            mgr.mgrname = Label1.Text;
+            List<managerreq> ls = b.record(mgr.mgrname);
+
+            GridView2.DataSource = ls;
+            GridView2.DataBind();
+
+
             //con.Open();
 
             //SqlDataAdapter ad = new SqlDataAdapter("select req_id,reqstatus,project_name,date_request from request_table where manager_name= " + name + "",con);
@@ -31,11 +38,11 @@ namespace WebApplication1
             //ad.Fill(dt);
             //GridView1.DataSource = dt;
             //GridView1.DataBind();
-            
+
             //con.Close();
-        
-        
-        
+
+
+
         }
 
 
@@ -46,18 +53,20 @@ namespace WebApplication1
 
         protected void LinkButton1_Click(object sender, EventArgs e)
         {
+
            
             Response.Redirect("pdtmanager.aspx?username=" + name);
+            mgr = new managerreq();
+            mgr.mgrname = Label1.Text;
+            List<managerreq> ls = b.record(mgr.mgrname);
+
+            GridView2.DataSource = ls;
+            GridView2.DataBind();
         }
 
         protected void Button2_Click(object sender, EventArgs e)
         {
-            mgr = new managerreq();
-            mgr.mgrname = Label1.Text;
-            List<managerreq> ls = b.record(mgr);
-
-            GridView2.DataSource = ls;
-            GridView2.DataBind();
+           
         }
     }
 }
