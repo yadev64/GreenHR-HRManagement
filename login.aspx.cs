@@ -28,9 +28,28 @@ namespace WebApplication1
             }
             else
             {
-                Label1.Text = "invalid";
+                Label1.Text = "Invalid Credentials";
             }
 
         }
+
+        protected void Button1_Click1(object sender, EventArgs e)
+        {
+            userentity usr = new userentity();
+            usr.email = TextBox1.Text;
+            usr.pwd = TextBox2.Text;
+
+            if (b.Rec(usr))
+            {
+
+                Response.Redirect("pdtmanager.aspx?username=" + TextBox1.Text);
+            }
+            else
+            {
+                Label1.Text = "Invalid Credentials";
+            }
+        }
+
+        
     }
 }

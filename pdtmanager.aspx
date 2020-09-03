@@ -29,6 +29,25 @@
             height: 119px;
         }
     </style>
+
+
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+
+
+
 </head>
 <body>
     <form id="form1" runat="server">
@@ -39,12 +58,14 @@
         <table class="auto-style1">
             <tr>
                 <td class="auto-style2">&nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:Button ID="Button1" runat="server" Height="33px" OnClick="Button1_Click" Text="New Request" Width="143px" />
+                    <div class="align-content-center">
+                        <asp:Button ID="Button1" runat="server" Height="33px" OnClick="Button1_Click" Text="New Request" Width="143px" BorderColor="White" BorderStyle="Solid" CssClass="login100-form-btn align-content-center" />
+                    </div>
                     <br />
                     <br />
                     <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">View Status</asp:LinkButton>
                     <br />
-                    <br />
+                    <%--<br />--%>
                     <br />
                 </td>
                 <td class="auto-style3">

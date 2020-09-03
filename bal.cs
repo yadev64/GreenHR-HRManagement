@@ -42,7 +42,7 @@ namespace WebApplication1
                     mgr.reqid = Convert.ToInt32(dt.Rows[i].ItemArray[8].ToString());
                     mgr.status = dt.Rows[i].ItemArray[9].ToString();
                     mgr.prjname = dt.Rows[i].ItemArray[1].ToString();
-                    mgr.date = Convert.ToDateTime(dt.Rows[i].ItemArray[10].ToString());
+                    //mgr.date = Convert.ToDateTime(dt.Rows[i].ItemArray[10].ToString());
                     ls.Add(mgr);
 
 

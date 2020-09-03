@@ -13,7 +13,7 @@ namespace WebApplication1
 {
     public class dal
     {
-        SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-B0P46V9\SQLEXPRESS;Initial Catalog=greenhr;Integrated Security=True");
+        SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-GAJ57FV\SQLEXPRESS;Initial Catalog=greenhr;Integrated Security=True");
         public DataTable dispRec()
         {
             con.Open();
@@ -58,6 +58,27 @@ namespace WebApplication1
             
             con.Close();
             return dt;
+        }
+        public void save(user_entity usr)
+        {
+            con.Open();
+            SqlCommand cmd = new SqlCommand("insert into register values(@username,@pwd,@phone,@address,@question,@answer,@email,@age)", con);
+
+            cmd.Parameters.AddWithValue("@username", usr.usr_name);
+            cmd.Parameters.AddWithValue("@pwd", usr.pwd);
+            cmd.Parameters.AddWithValue("@phone", usr.phone);
+            cmd.Parameters.AddWithValue("@address", usr.adress);
+            cmd.Parameters.AddWithValue("@question", usr.question);
+            cmd.Parameters.AddWithValue("@answer", usr.answer);
+            cmd.Parameters.AddWithValue("@email", usr.email);
+            cmd.Parameters.AddWithValue("@age", usr.age);
+
+
+            cmd.ExecuteNonQuery();
+
+
+
+            con.Close();
         }
     }
 }
