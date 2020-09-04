@@ -7,10 +7,14 @@ using System.Web.UI.WebControls;
 
 namespace WebApplication1
 {
-    public partial class WebForm3 : System.Web.UI.Page
+    public partial class application_details : System.Web.UI.Page
     {
+
+        public int appl_id { get; set; }
+
         protected void Page_Load(object sender, EventArgs e)
         {
+            appl_id = Convert.ToInt32( Request.QueryString["applid"]);
 
         }
 
@@ -19,8 +23,7 @@ namespace WebApplication1
 
             Button bt = (Button)btn;
 
-            Response.Redirect("ApplicationEditor.aspx?reqid=" + bt.CommandArgument.ToString());
+            Response.Redirect("candidate_details.aspx?cand_id=" + bt.CommandArgument.ToString());
         }
-
     }
 }

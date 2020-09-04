@@ -44,6 +44,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DataVisualization" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -68,6 +69,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ApplicationEditor.aspx" />
+    <Content Include="application_details.aspx" />
+    <Content Include="candidate_details.aspx" />
+    <Content Include="HRDashboard_ViewApplication.aspx" />
     <Content Include="pdtmanagerreq.aspx" />
     <Content Include="Web.config" />
     <Content Include="pdtmanager.aspx" />
@@ -82,8 +86,29 @@
     <Compile Include="ApplicationEditor.aspx.designer.cs">
       <DependentUpon>ApplicationEditor.aspx</DependentUpon>
     </Compile>
+    <Compile Include="application_details.aspx.cs">
+      <DependentUpon>application_details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="application_details.aspx.designer.cs">
+      <DependentUpon>application_details.aspx</DependentUpon>
+    </Compile>
     <Compile Include="bal.cs" />
+    <Compile Include="candidate_details.aspx.cs">
+      <DependentUpon>candidate_details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="candidate_details.aspx.designer.cs">
+      <DependentUpon>candidate_details.aspx</DependentUpon>
+    </Compile>
     <Compile Include="dal.cs" />
+    <Compile Include="HRDashboard_ViewApplication.aspx.cs">
+      <DependentUpon>HRDashboard_ViewApplication.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HRDashboard_ViewApplication.aspx.designer.cs">
+      <DependentUpon>HRDashboard_ViewApplication.aspx</DependentUpon>
+    </Compile>
     <Compile Include="managerreq.cs" />
     <Compile Include="pdtmanagerreq.aspx.cs">
       <DependentUpon>pdtmanagerreq.aspx</DependentUpon>
