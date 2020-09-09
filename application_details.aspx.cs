@@ -14,7 +14,7 @@ namespace WebApplication1
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            appl_id = Convert.ToInt32( Request.QueryString["applid"]);
+            this.appl_id = Convert.ToInt32( Request.QueryString["applid"]);
 
         }
 

@@ -19,7 +19,7 @@ namespace WebApplication1
 
             Button bt = (Button)btn;
 
-            Response.Redirect("ApplicationEditor.aspx?reqid=" + bt.CommandArgument.ToString());
+            Response.Redirect("NewApplicationEditor.aspx?reqid=" + bt.CommandArgument.ToString());
         }
 
     }

@@ -21,11 +21,16 @@ namespace WebApplication1
             usr.email = TextBox1.Text;
             usr.pwd = TextBox2.Text;
             
-            if (b.Rec(usr))
+            if (b.Rec(usr) == 1)
             {
-
                 Response.Redirect("pdtmanager.aspx?username=" + TextBox1.Text);
             }
+
+            else if (b.Rec(usr) == 2)
+            {
+                Response.Redirect("HRDashboard.aspx?username=" + TextBox1.Text);
+            }
+
             else
             {
                 Label1.Text = "Invalid Credentials";
@@ -39,11 +44,16 @@ namespace WebApplication1
             usr.email = TextBox1.Text;
             usr.pwd = TextBox2.Text;
 
-            if (b.Rec(usr))
+            if (b.Rec(usr) == 1)
             {
-
                 Response.Redirect("pdtmanager.aspx?username=" + TextBox1.Text);
             }
+
+            else if (b.Rec(usr) == 2)
+            {
+                Response.Redirect("HRDashboard.aspx?username=" + TextBox1.Text);
+            }
+
             else
             {
                 Label1.Text = "Invalid Credentials";

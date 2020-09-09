@@ -2,6 +2,11 @@
 
 <!DOCTYPE html>
 <script runat="server">
+
+    protected void Repeater1_ItemCommand(object source, RepeaterCommandEventArgs e)
+    {
+
+    }
 </script>
 
 
@@ -41,28 +46,28 @@
                     
                     <br />
                     <h1>Application Details</h1>
-                    <asp:FormView ID="FormView1" runat="server" DataKeyNames="appl_id" DataSourceID="SqlDataSource2">
+                    <asp:FormView ID="FormView1" runat="server" DataKeyNames="application_id" DataSourceID="SqlDataSource2">
                         <EditItemTemplate>
-                            appl_id:
-                            <asp:Label ID="appl_idLabel1" runat="server" Text='<%# Eval("appl_id") %>' />
+                            application_id:
+                            <asp:Label ID="application_idLabel1" runat="server" Text='<%# Eval("application_id") %>' />
                             <br />
-                            job_desc:
-                            <asp:TextBox ID="job_descTextBox" runat="server" Text='<%# Bind("job_desc") %>' />
+                            job_description:
+                            <asp:TextBox ID="job_descriptionTextBox" runat="server" Text='<%# Bind("job_description") %>' />
                             <br />
-                            min_qualification:
-                            <asp:TextBox ID="min_qualificationTextBox" runat="server" Text='<%# Bind("min_qualification") %>' />
+                            minimum_qualification:
+                            <asp:TextBox ID="minimum_qualificationTextBox" runat="server" Text='<%# Bind("minimum_qualification") %>' />
                             <br />
-                            pref_qualification:
-                            <asp:TextBox ID="pref_qualificationTextBox" runat="server" Text='<%# Bind("pref_qualification") %>' />
+                            preferred_qualification:
+                            <asp:TextBox ID="preferred_qualificationTextBox" runat="server" Text='<%# Bind("preferred_qualification") %>' />
                             <br />
-                            resp:
-                            <asp:TextBox ID="respTextBox" runat="server" Text='<%# Bind("resp") %>' />
+                            responsibility:
+                            <asp:TextBox ID="responsibilityTextBox" runat="server" Text='<%# Bind("responsibility") %>' />
                             <br />
-                            req_id:
-                            <asp:TextBox ID="req_idTextBox" runat="server" Text='<%# Bind("req_id") %>' />
+                            request_id:
+                            <asp:TextBox ID="request_idTextBox" runat="server" Text='<%# Bind("request_id") %>' />
                             <br />
-                            appstatus:
-                            <asp:TextBox ID="appstatusTextBox" runat="server" Text='<%# Bind("appstatus") %>' />
+                            application_status:
+                            <asp:TextBox ID="application_statusTextBox" runat="server" Text='<%# Bind("application_status") %>' />
                             <br />
                             manager_name:
                             <asp:TextBox ID="manager_nameTextBox" runat="server" Text='<%# Bind("manager_name") %>' />
@@ -79,42 +84,39 @@
                             skill:
                             <asp:TextBox ID="skillTextBox" runat="server" Text='<%# Bind("skill") %>' />
                             <br />
-                            pgm_languages:
-                            <asp:TextBox ID="pgm_languagesTextBox" runat="server" Text='<%# Bind("pgm_languages") %>' />
+                            program_language:
+                            <asp:TextBox ID="program_languageTextBox" runat="server" Text='<%# Bind("program_language") %>' />
                             <br />
-                            exp_years:
-                            <asp:TextBox ID="exp_yearsTextBox" runat="server" Text='<%# Bind("exp_years") %>' />
+                            experience_years:
+                            <asp:TextBox ID="experience_yearsTextBox" runat="server" Text='<%# Bind("experience_years") %>' />
                             <br />
-                            desg:
-                            <asp:TextBox ID="desgTextBox" runat="server" Text='<%# Bind("desg") %>' />
+                            designation:
+                            <asp:TextBox ID="designationTextBox" runat="server" Text='<%# Bind("designation") %>' />
                             <br />
-                            dateapp:
-                            <asp:TextBox ID="dateappTextBox" runat="server" Text='<%# Bind("dateapp") %>' />
+                            date_application:
+                            <asp:TextBox ID="date_applicationTextBox" runat="server" Text='<%# Bind("date_application") %>' />
                             <br />
                             <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" CommandName="Update" Text="Update" />
                             &nbsp;<asp:LinkButton ID="UpdateCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
                         </EditItemTemplate>
                         <InsertItemTemplate>
-                            appl_id:
-                            <asp:TextBox ID="appl_idTextBox" runat="server" Text='<%# Bind("appl_id") %>' />
+                            job_description:
+                            <asp:TextBox ID="job_descriptionTextBox" runat="server" Text='<%# Bind("job_description") %>' />
                             <br />
-                            job_desc:
-                            <asp:TextBox ID="job_descTextBox" runat="server" Text='<%# Bind("job_desc") %>' />
+                            minimum_qualification:
+                            <asp:TextBox ID="minimum_qualificationTextBox" runat="server" Text='<%# Bind("minimum_qualification") %>' />
                             <br />
-                            min_qualification:
-                            <asp:TextBox ID="min_qualificationTextBox" runat="server" Text='<%# Bind("min_qualification") %>' />
+                            preferred_qualification:
+                            <asp:TextBox ID="preferred_qualificationTextBox" runat="server" Text='<%# Bind("preferred_qualification") %>' />
                             <br />
-                            pref_qualification:
-                            <asp:TextBox ID="pref_qualificationTextBox" runat="server" Text='<%# Bind("pref_qualification") %>' />
+                            responsibility:
+                            <asp:TextBox ID="responsibilityTextBox" runat="server" Text='<%# Bind("responsibility") %>' />
                             <br />
-                            resp:
-                            <asp:TextBox ID="respTextBox" runat="server" Text='<%# Bind("resp") %>' />
+                            request_id:
+                            <asp:TextBox ID="request_idTextBox" runat="server" Text='<%# Bind("request_id") %>' />
                             <br />
-                            req_id:
-                            <asp:TextBox ID="req_idTextBox" runat="server" Text='<%# Bind("req_id") %>' />
-                            <br />
-                            appstatus:
-                            <asp:TextBox ID="appstatusTextBox" runat="server" Text='<%# Bind("appstatus") %>' />
+                            application_status:
+                            <asp:TextBox ID="application_statusTextBox" runat="server" Text='<%# Bind("application_status") %>' />
                             <br />
                             manager_name:
                             <asp:TextBox ID="manager_nameTextBox" runat="server" Text='<%# Bind("manager_name") %>' />
@@ -131,42 +133,42 @@
                             skill:
                             <asp:TextBox ID="skillTextBox" runat="server" Text='<%# Bind("skill") %>' />
                             <br />
-                            pgm_languages:
-                            <asp:TextBox ID="pgm_languagesTextBox" runat="server" Text='<%# Bind("pgm_languages") %>' />
+                            program_language:
+                            <asp:TextBox ID="program_languageTextBox" runat="server" Text='<%# Bind("program_language") %>' />
                             <br />
-                            exp_years:
-                            <asp:TextBox ID="exp_yearsTextBox" runat="server" Text='<%# Bind("exp_years") %>' />
+                            experience_years:
+                            <asp:TextBox ID="experience_yearsTextBox" runat="server" Text='<%# Bind("experience_years") %>' />
                             <br />
-                            desg:
-                            <asp:TextBox ID="desgTextBox" runat="server" Text='<%# Bind("desg") %>' />
+                            designation:
+                            <asp:TextBox ID="designationTextBox" runat="server" Text='<%# Bind("designation") %>' />
                             <br />
-                            dateapp:
-                            <asp:TextBox ID="dateappTextBox" runat="server" Text='<%# Bind("dateapp") %>' />
+                            date_application:
+                            <asp:TextBox ID="date_applicationTextBox" runat="server" Text='<%# Bind("date_application") %>' />
                             <br />
                             <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" Text="Insert" />
                             &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
                         </InsertItemTemplate>
                         <ItemTemplate>
-                            appl_id:
-                            <asp:Label ID="appl_idLabel" runat="server" Text='<%# Eval("appl_id") %>' />
+                            application_id:
+                            <asp:Label ID="application_idLabel" runat="server" Text='<%# Eval("application_id") %>' />
                             <br />
-                            job_desc:
-                            <asp:Label ID="job_descLabel" runat="server" Text='<%# Bind("job_desc") %>' />
+                            job_description:
+                            <asp:Label ID="job_descriptionLabel" runat="server" Text='<%# Bind("job_description") %>' />
                             <br />
-                            min_qualification:
-                            <asp:Label ID="min_qualificationLabel" runat="server" Text='<%# Bind("min_qualification") %>' />
+                            minimum_qualification:
+                            <asp:Label ID="minimum_qualificationLabel" runat="server" Text='<%# Bind("minimum_qualification") %>' />
                             <br />
-                            pref_qualification:
-                            <asp:Label ID="pref_qualificationLabel" runat="server" Text='<%# Bind("pref_qualification") %>' />
+                            preferred_qualification:
+                            <asp:Label ID="preferred_qualificationLabel" runat="server" Text='<%# Bind("preferred_qualification") %>' />
                             <br />
-                            resp:
-                            <asp:Label ID="respLabel" runat="server" Text='<%# Bind("resp") %>' />
+                            responsibility:
+                            <asp:Label ID="responsibilityLabel" runat="server" Text='<%# Bind("responsibility") %>' />
                             <br />
-                            req_id:
-                            <asp:Label ID="req_idLabel" runat="server" Text='<%# Bind("req_id") %>' />
+                            request_id:
+                            <asp:Label ID="request_idLabel" runat="server" Text='<%# Bind("request_id") %>' />
                             <br />
-                            appstatus:
-                            <asp:Label ID="appstatusLabel" runat="server" Text='<%# Bind("appstatus") %>' />
+                            application_status:
+                            <asp:Label ID="application_statusLabel" runat="server" Text='<%# Bind("application_status") %>' />
                             <br />
                             manager_name:
                             <asp:Label ID="manager_nameLabel" runat="server" Text='<%# Bind("manager_name") %>' />
@@ -183,26 +185,34 @@
                             skill:
                             <asp:Label ID="skillLabel" runat="server" Text='<%# Bind("skill") %>' />
                             <br />
-                            pgm_languages:
-                            <asp:Label ID="pgm_languagesLabel" runat="server" Text='<%# Bind("pgm_languages") %>' />
+                            program_language:
+                            <asp:Label ID="program_languageLabel" runat="server" Text='<%# Bind("program_language") %>' />
                             <br />
-                            exp_years:
-                            <asp:Label ID="exp_yearsLabel" runat="server" Text='<%# Bind("exp_years") %>' />
+                            experience_years:
+                            <asp:Label ID="experience_yearsLabel" runat="server" Text='<%# Bind("experience_years") %>' />
                             <br />
-                            desg:
-                            <asp:Label ID="desgLabel" runat="server" Text='<%# Bind("desg") %>' />
+                            designation:
+                            <asp:Label ID="designationLabel" runat="server" Text='<%# Bind("designation") %>' />
                             <br />
-                            dateapp:
-                            <asp:Label ID="dateappLabel" runat="server" Text='<%# Bind("dateapp") %>' />
+                            date_application:
+                            <asp:Label ID="date_applicationLabel" runat="server" Text='<%# Bind("date_application") %>' />
                             <br />
 
                         </ItemTemplate>
                     </asp:FormView>
-                    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:GreenHRConnectionString4 %>" SelectCommand="SELECT * FROM [application_table] WHERE [appl_id]=<%=appl_id %>"></asp:SqlDataSource>
+
+                     
+
+
+                    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:GreenHR_500ConnectionString4 %>" SelectCommand="SELECT * FROM [application_table] WHERE ([application_id] = @application_id)">
+                        <SelectParameters>
+                             <asp:querystringparameter name="application_id" querystringfield="appl_id" defaultvalue="1"/>
+                        </SelectParameters>
+                    </asp:SqlDataSource>
                     
                     <br />
                     <h1><strong>Registered Candidates</strong></h1>
-                    <asp:Repeater ID="Repeater1" runat="server" DataSourceID="SqlDataSource1">
+                    <asp:Repeater ID="Repeater1" runat="server" DataSourceID="SqlDataSource1" OnItemCommand="Repeater1_ItemCommand">
                         <HeaderTemplate>
                             <table border="1">
                                 <tr>
@@ -217,20 +227,25 @@
                         </HeaderTemplate>
                         <ItemTemplate>
                              <tr>
-                                <td> <%# Eval("cand_id") %> </td>
-                                <td> <%# Eval("cand_name") %> </td>
-                                 <td> <%# Eval("exp_years") %> </td>
+                                <td> <%# Eval("candidate_id") %> </td>
+                                <td> <%# Eval("candidate_name") %> </td>
+                                 <td> <%# Eval("experience_year") %> </td>
                                  <td> <%# Eval("latest_company") %> </td>
                                
                                  <td>
-                                        <asp:Button ID="details" runat="server" Text="View Details"  CommandArgument='<%#Eval("cand_id")%>'  OnClick="MyBtnHandler"/>
+                                        <asp:Button ID="details" runat="server" Text="View Details"  CommandArgument='<%#Eval("candidate_id")%>'  OnClick="MyBtnHandler"/>
                                  </td>
                              </tr>
                           
                         </ItemTemplate>    
                       
                     </asp:Repeater>
-                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:GreenHRConnectionString3 %>" SelectCommand="SELECT [cand_id], [cand_name], [exp_years], [latest_company] FROM [candidate_table] WHERE [appl_id]= <%=applid %> ORDER BY [reg_date] DESC"></asp:SqlDataSource>
+                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:GreenHR_500ConnectionString7 %>" SelectCommand="SELECT [candidate_id], [candidate_name], [experience_year], [latest_company] FROM [candidate_table] WHERE ([application_id] = @application_id)">
+                        <SelectParameters>
+                            <asp:querystringparameter name="application_id" querystringfield="appl_id" defaultvalue="1"/>
+                        </SelectParameters>
+                    </asp:SqlDataSource>
+                    
                     <h1>
                         <br />
                         Shortlisted Candidates</h1>
@@ -247,9 +262,9 @@
                         </HeaderTemplate>
                         <ItemTemplate>
                              <tr>
-                                <td> <%# Eval("cand_id") %> </td>
-                                <td> <%# Eval("cand_name") %> </td>
-                                <td> <%# Eval("exp_years") %> </td>
+                                <td> <%# Eval("candidate_id") %> </td>
+                                <td> <%# Eval("candidate_name") %> </td>
+                                <td> <%# Eval("experience_year") %> </td>
                                 <td> <%# Eval("latest_company") %> </td>
                                 <td>
                                         <asp:Button ID="details" runat="server" Text="View Details"  CommandArgument='<%#Eval("cand_id")%>'  OnClick="MyBtnHandler"/>
@@ -257,7 +272,16 @@
                              </tr>
                         </ItemTemplate>
                         </asp:Repeater>
-                        <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:GreenHRConnectionString5 %>" SelectCommand="SELECT [cand_id], [cand_name], [exp_years], [latest_company], [status] FROM [candidate_table] WHERE [appl_id]= <%=applid %> AND [status]='shortlisted'"></asp:SqlDataSource>
+                        <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:GreenHR_500ConnectionString8 %>" SelectCommand="SELECT [candidate_id], [candidate_name], [experience_year], [latest_company], [status] FROM [candidate_table] WHERE (([application_id] = @application_id) AND ([status] = 'shortlisted'))">
+                            <SelectParameters>
+                                <asp:querystringparameter name="application_id" querystringfield="appl_id" defaultvalue="1"/>
+                                
+                        </SelectParameters>
+                        </asp:SqlDataSource>
+
+                         
+
+
                     </p>
                 </td>
             </tr>

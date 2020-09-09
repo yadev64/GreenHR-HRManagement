@@ -20,7 +20,7 @@ namespace WebApplication1
 
             Button bt = (Button)btn;
 
-            Response.Redirect("application_details.aspx?applid=" + bt.CommandArgument.ToString());
+            Response.Redirect("application_details.aspx?appl_id=" + bt.CommandArgument.ToString());
         }
 
     }

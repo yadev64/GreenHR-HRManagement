@@ -15,14 +15,16 @@ namespace WebApplication1
         protected void Page_Load(object sender, EventArgs e)
         {
             cand_id = Convert.ToInt32(Request.QueryString["cand_id"]);
+            
         }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
+            
             bal b = new bal();
 
             b.candShortlister(cand_id);
-
+            
 
         }
     }

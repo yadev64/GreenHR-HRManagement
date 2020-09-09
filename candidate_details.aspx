@@ -30,6 +30,7 @@
 <body>
     <form id="form1" runat="server">
         <div>
+            <br />
         </div>
         <table class="auto-style1">
             <tr>
@@ -40,22 +41,22 @@
                 <td class="auto-style2">
                     
                     <br />
-                    <asp:FormView ID="FormView1" runat="server" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" CellSpacing="2" DataKeyNames="cand_id" DataSourceID="SqlDataSource1" GridLines="Both">
+                    <asp:FormView ID="FormView1" runat="server" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" CellSpacing="2" DataKeyNames="candidate_id" DataSourceID="SqlDataSource1" GridLines="Both" Width="696px">
                         <EditItemTemplate>
-                            cand_id:
-                            <asp:Label ID="cand_idLabel1" runat="server" Text='<%# Eval("cand_id") %>' />
+                            candidate_id:
+                            <asp:Label ID="candidate_idLabel1" runat="server" Text='<%# Eval("candidate_id") %>' />
                             <br />
-                            cand_name:
-                            <asp:TextBox ID="cand_nameTextBox" runat="server" Text='<%# Bind("cand_name") %>' />
+                            candidate_name:
+                            <asp:TextBox ID="candidate_nameTextBox" runat="server" Text='<%# Bind("candidate_name") %>' />
                             <br />
                             skills:
                             <asp:TextBox ID="skillsTextBox" runat="server" Text='<%# Bind("skills") %>' />
                             <br />
-                            pgm_language:
-                            <asp:TextBox ID="pgm_languageTextBox" runat="server" Text='<%# Bind("pgm_language") %>' />
+                            program_language:
+                            <asp:TextBox ID="program_languageTextBox" runat="server" Text='<%# Bind("program_language") %>' />
                             <br />
-                            high_qualification:
-                            <asp:TextBox ID="high_qualificationTextBox" runat="server" Text='<%# Bind("high_qualification") %>' />
+                            highest_qualification:
+                            <asp:TextBox ID="highest_qualificationTextBox" runat="server" Text='<%# Bind("highest_qualification") %>' />
                             <br />
                             college:
                             <asp:TextBox ID="collegeTextBox" runat="server" Text='<%# Bind("college") %>' />
@@ -66,23 +67,23 @@
                             address:
                             <asp:TextBox ID="addressTextBox" runat="server" Text='<%# Bind("address") %>' />
                             <br />
-                            exp_years:
-                            <asp:TextBox ID="exp_yearsTextBox" runat="server" Text='<%# Bind("exp_years") %>' />
+                            experience_year:
+                            <asp:TextBox ID="experience_yearTextBox" runat="server" Text='<%# Bind("experience_year") %>' />
                             <br />
-                            notice_months:
-                            <asp:TextBox ID="notice_monthsTextBox" runat="server" Text='<%# Bind("notice_months") %>' />
+                            notice_period:
+                            <asp:TextBox ID="notice_periodTextBox" runat="server" Text='<%# Bind("notice_period") %>' />
                             <br />
                             latest_company:
                             <asp:TextBox ID="latest_companyTextBox" runat="server" Text='<%# Bind("latest_company") %>' />
                             <br />
-                            latest_desg:
-                            <asp:TextBox ID="latest_desgTextBox" runat="server" Text='<%# Bind("latest_desg") %>' />
+                            latest_designation:
+                            <asp:TextBox ID="latest_designationTextBox" runat="server" Text='<%# Bind("latest_designation") %>' />
                             <br />
-                            curr_sal:
-                            <asp:TextBox ID="curr_salTextBox" runat="server" Text='<%# Bind("curr_sal") %>' />
+                            current_salary:
+                            <asp:TextBox ID="current_salaryTextBox" runat="server" Text='<%# Bind("current_salary") %>' />
                             <br />
-                            reg_date:
-                            <asp:TextBox ID="reg_dateTextBox" runat="server" Text='<%# Bind("reg_date") %>' />
+                            registration_date:
+                            <asp:TextBox ID="registration_dateTextBox" runat="server" Text='<%# Bind("registration_date") %>' />
                             <br />
                             age:
                             <asp:TextBox ID="ageTextBox" runat="server" Text='<%# Bind("age") %>' />
@@ -90,14 +91,17 @@
                             dob:
                             <asp:TextBox ID="dobTextBox" runat="server" Text='<%# Bind("dob") %>' />
                             <br />
+                            request_id:
+                            <asp:TextBox ID="request_idTextBox" runat="server" Text='<%# Bind("request_id") %>' />
+                            <br />
+                            candidate_mail:
+                            <asp:TextBox ID="candidate_mailTextBox" runat="server" Text='<%# Bind("candidate_mail") %>' />
+                            <br />
                             interview_date:
                             <asp:TextBox ID="interview_dateTextBox" runat="server" Text='<%# Bind("interview_date") %>' />
                             <br />
-                            req_id:
-                            <asp:TextBox ID="req_idTextBox" runat="server" Text='<%# Bind("req_id") %>' />
-                            <br />
-                            cand_email:
-                            <asp:TextBox ID="cand_emailTextBox" runat="server" Text='<%# Bind("cand_email") %>' />
+                            application_id:
+                            <asp:TextBox ID="application_idTextBox" runat="server" Text='<%# Bind("application_id") %>' />
                             <br />
                             status:
                             <asp:TextBox ID="statusTextBox" runat="server" Text='<%# Bind("status") %>' />
@@ -109,17 +113,17 @@
                         <FooterStyle BackColor="#F7DFB5" ForeColor="#8C4510" />
                         <HeaderStyle BackColor="#A55129" Font-Bold="True" ForeColor="White" />
                         <InsertItemTemplate>
-                            cand_name:
-                            <asp:TextBox ID="cand_nameTextBox" runat="server" Text='<%# Bind("cand_name") %>' />
+                            candidate_name:
+                            <asp:TextBox ID="candidate_nameTextBox" runat="server" Text='<%# Bind("candidate_name") %>' />
                             <br />
                             skills:
                             <asp:TextBox ID="skillsTextBox" runat="server" Text='<%# Bind("skills") %>' />
                             <br />
-                            pgm_language:
-                            <asp:TextBox ID="pgm_languageTextBox" runat="server" Text='<%# Bind("pgm_language") %>' />
+                            program_language:
+                            <asp:TextBox ID="program_languageTextBox" runat="server" Text='<%# Bind("program_language") %>' />
                             <br />
-                            high_qualification:
-                            <asp:TextBox ID="high_qualificationTextBox" runat="server" Text='<%# Bind("high_qualification") %>' />
+                            highest_qualification:
+                            <asp:TextBox ID="highest_qualificationTextBox" runat="server" Text='<%# Bind("highest_qualification") %>' />
                             <br />
                             college:
                             <asp:TextBox ID="collegeTextBox" runat="server" Text='<%# Bind("college") %>' />
@@ -130,23 +134,23 @@
                             address:
                             <asp:TextBox ID="addressTextBox" runat="server" Text='<%# Bind("address") %>' />
                             <br />
-                            exp_years:
-                            <asp:TextBox ID="exp_yearsTextBox" runat="server" Text='<%# Bind("exp_years") %>' />
+                            experience_year:
+                            <asp:TextBox ID="experience_yearTextBox" runat="server" Text='<%# Bind("experience_year") %>' />
                             <br />
-                            notice_months:
-                            <asp:TextBox ID="notice_monthsTextBox" runat="server" Text='<%# Bind("notice_months") %>' />
+                            notice_period:
+                            <asp:TextBox ID="notice_periodTextBox" runat="server" Text='<%# Bind("notice_period") %>' />
                             <br />
                             latest_company:
                             <asp:TextBox ID="latest_companyTextBox" runat="server" Text='<%# Bind("latest_company") %>' />
                             <br />
-                            latest_desg:
-                            <asp:TextBox ID="latest_desgTextBox" runat="server" Text='<%# Bind("latest_desg") %>' />
+                            latest_designation:
+                            <asp:TextBox ID="latest_designationTextBox" runat="server" Text='<%# Bind("latest_designation") %>' />
                             <br />
-                            curr_sal:
-                            <asp:TextBox ID="curr_salTextBox" runat="server" Text='<%# Bind("curr_sal") %>' />
+                            current_salary:
+                            <asp:TextBox ID="current_salaryTextBox" runat="server" Text='<%# Bind("current_salary") %>' />
                             <br />
-                            reg_date:
-                            <asp:TextBox ID="reg_dateTextBox" runat="server" Text='<%# Bind("reg_date") %>' />
+                            registration_date:
+                            <asp:TextBox ID="registration_dateTextBox" runat="server" Text='<%# Bind("registration_date") %>' />
                             <br />
                             age:
                             <asp:TextBox ID="ageTextBox" runat="server" Text='<%# Bind("age") %>' />
@@ -154,14 +158,17 @@
                             dob:
                             <asp:TextBox ID="dobTextBox" runat="server" Text='<%# Bind("dob") %>' />
                             <br />
+                            request_id:
+                            <asp:TextBox ID="request_idTextBox" runat="server" Text='<%# Bind("request_id") %>' />
+                            <br />
+                            candidate_mail:
+                            <asp:TextBox ID="candidate_mailTextBox" runat="server" Text='<%# Bind("candidate_mail") %>' />
+                            <br />
                             interview_date:
                             <asp:TextBox ID="interview_dateTextBox" runat="server" Text='<%# Bind("interview_date") %>' />
                             <br />
-                            req_id:
-                            <asp:TextBox ID="req_idTextBox" runat="server" Text='<%# Bind("req_id") %>' />
-                            <br />
-                            cand_email:
-                            <asp:TextBox ID="cand_emailTextBox" runat="server" Text='<%# Bind("cand_email") %>' />
+                            application_id:
+                            <asp:TextBox ID="application_idTextBox" runat="server" Text='<%# Bind("application_id") %>' />
                             <br />
                             status:
                             <asp:TextBox ID="statusTextBox" runat="server" Text='<%# Bind("status") %>' />
@@ -169,21 +176,22 @@
                             <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" Text="Insert" />
                             &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
                         </InsertItemTemplate>
+
                         <ItemTemplate>
-                            cand_id:
-                            <asp:Label ID="cand_idLabel" runat="server" Text='<%# Eval("cand_id") %>' />
+                            candidate_id:
+                            <asp:Label ID="candidate_idLabel" runat="server" Text='<%# Eval("candidate_id") %>' />
                             <br />
-                            cand_name:
-                            <asp:Label ID="cand_nameLabel" runat="server" Text='<%# Bind("cand_name") %>' />
+                            candidate_name:
+                            <asp:Label ID="candidate_nameLabel" runat="server" Text='<%# Bind("candidate_name") %>' />
                             <br />
                             skills:
                             <asp:Label ID="skillsLabel" runat="server" Text='<%# Bind("skills") %>' />
                             <br />
-                            pgm_language:
-                            <asp:Label ID="pgm_languageLabel" runat="server" Text='<%# Bind("pgm_language") %>' />
+                            program_language:
+                            <asp:Label ID="program_languageLabel" runat="server" Text='<%# Bind("program_language") %>' />
                             <br />
-                            high_qualification:
-                            <asp:Label ID="high_qualificationLabel" runat="server" Text='<%# Bind("high_qualification") %>' />
+                            highest_qualification:
+                            <asp:Label ID="highest_qualificationLabel" runat="server" Text='<%# Bind("highest_qualification") %>' />
                             <br />
                             college:
                             <asp:Label ID="collegeLabel" runat="server" Text='<%# Bind("college") %>' />
@@ -194,23 +202,23 @@
                             address:
                             <asp:Label ID="addressLabel" runat="server" Text='<%# Bind("address") %>' />
                             <br />
-                            exp_years:
-                            <asp:Label ID="exp_yearsLabel" runat="server" Text='<%# Bind("exp_years") %>' />
+                            experience_year:
+                            <asp:Label ID="experience_yearLabel" runat="server" Text='<%# Bind("experience_year") %>' />
                             <br />
-                            notice_months:
-                            <asp:Label ID="notice_monthsLabel" runat="server" Text='<%# Bind("notice_months") %>' />
+                            notice_period:
+                            <asp:Label ID="notice_periodLabel" runat="server" Text='<%# Bind("notice_period") %>' />
                             <br />
                             latest_company:
                             <asp:Label ID="latest_companyLabel" runat="server" Text='<%# Bind("latest_company") %>' />
                             <br />
-                            latest_desg:
-                            <asp:Label ID="latest_desgLabel" runat="server" Text='<%# Bind("latest_desg") %>' />
+                            latest_designation:
+                            <asp:Label ID="latest_designationLabel" runat="server" Text='<%# Bind("latest_designation") %>' />
                             <br />
-                            curr_sal:
-                            <asp:Label ID="curr_salLabel" runat="server" Text='<%# Bind("curr_sal") %>' />
+                            current_salary:
+                            <asp:Label ID="current_salaryLabel" runat="server" Text='<%# Bind("current_salary") %>' />
                             <br />
-                            reg_date:
-                            <asp:Label ID="reg_dateLabel" runat="server" Text='<%# Bind("reg_date") %>' />
+                            registration_date:
+                            <asp:Label ID="registration_dateLabel" runat="server" Text='<%# Bind("registration_date") %>' />
                             <br />
                             age:
                             <asp:Label ID="ageLabel" runat="server" Text='<%# Bind("age") %>' />
@@ -218,15 +226,19 @@
                             dob:
                             <asp:Label ID="dobLabel" runat="server" Text='<%# Bind("dob") %>' />
                             <br />
+                            request_id:
+                            <asp:Label ID="request_idLabel" runat="server" Text='<%# Bind("request_id") %>' />
+                            <br />
+                            candidate_mail:
+                            <asp:Label ID="candidate_mailLabel" runat="server" Text='<%# Bind("candidate_mail") %>' />
+                            <br />
                             interview_date:
                             <asp:Label ID="interview_dateLabel" runat="server" Text='<%# Bind("interview_date") %>' />
                             <br />
-                            req_id:
-                            <asp:Label ID="req_idLabel" runat="server" Text='<%# Bind("req_id") %>' />
+                            application_id:
+                            <asp:Label ID="application_idLabel" runat="server" Text='<%# Bind("application_id") %>' />
                             <br />
-                            cand_email:
-                            <asp:Label ID="cand_emailLabel" runat="server" Text='<%# Bind("cand_email") %>' />
-                            <br />
+
                             status:
                             <asp:Label ID="statusLabel" runat="server" Text='<%# Bind("status") %>' />
                             <br />
@@ -235,10 +247,27 @@
                         <PagerStyle ForeColor="#8C4510" HorizontalAlign="Center" />
                         <RowStyle BackColor="#FFF7E7" ForeColor="#8C4510" />
                     </asp:FormView>
-                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:GreenHRConnectionString %>" SelectCommand="SELECT * FROM [candidate_table] WHERE [cand_id]=<%=cand_id %>"></asp:SqlDataSource>
-                    <br />
-                    <br />
+
+                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:GreenHR_500ConnectionString4 %>" SelectCommand="SELECT * FROM [candidate_table] WHERE ([candidate_id] = @candidate_id)">
+                        <SelectParameters>
+                            <asp:querystringparameter name="candidate_id" querystringfield="cand_id" defaultvalue="-1"/>
+                        </SelectParameters>
+                    </asp:SqlDataSource>
+
+
+
+
+                    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:GreenHRConnectionString %>" SelectCommand="SELECT * FROM [candidate_table] WHERE ([candidate_id] = @cand_id)">
+                        <SelectParameters>
+                            <asp:querystringparameter name="cand_id" querystringfield="cand_id" defaultvalue="-1"/>
+                        </SelectParameters>
+                    </asp:SqlDataSource>
+
+
+                    
                     <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Shortlist this candidate" />
+                    <br />
+                    <br />
                 </td>
             </tr>
         </table>

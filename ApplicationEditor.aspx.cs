@@ -22,6 +22,7 @@ namespace WebApplication1
             hrmanager cls  =  bl.rec(reqid);
            
             TextBox1.Text = cls.appl_id.ToString();
+            TextBox1.Text = "Hello";
             TextBox2.Text = cls.job_desc;
             TextBox3.Text = cls.min_qualification.ToString();
             TextBox4.Text = cls.pref_qualification;
@@ -56,10 +57,10 @@ namespace WebApplication1
             cls.period_month = Convert.ToInt32(TextBox10.Text);
             cls.noof_vacancies= Convert.ToInt32(TextBox11.Text);
             cls.skill = TextBox12.Text;
-            cls.pgm_languages = Convert.ToInt32(TextBox13.Text);
+            cls.pgm_languages = TextBox13.Text;
             cls.exp_years = Convert.ToInt32(TextBox14.Text);
             cls.desg= TextBox15.Text;
-            cls.dateapp = Convert.ToInt32(TextBox16.Text);
+            cls.dateapp = TextBox16.Text;
             dal dl  =  new dal();
             dl.storeapp(cls);
 

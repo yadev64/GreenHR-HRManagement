@@ -26,12 +26,33 @@ namespace WebApplication1
         public int period_month { get; set; }
         public int noof_vacancies { get; set; }
         public string skill { get; set; }
-        public int pgm_languages { get; set; }
+        public string pgm_languages { get; set; }
         public int exp_years { get; set; }
         public string desg { get; set; }
-        public int dateapp { get; set; }
+        public string dateapp { get; set; }
 
-
-
+        }
+    public class candpool
+    {
+        public int cand_id { get;  set;}
+        public string cand_name { get; set; }
+        public string skills { get; set; }
+        public string pgm_language { get; set; }
+        public string high_qualification { get; set; }
+        public string college { get; set; }
+        public string university { get; set; }
+        public string address { get; set; }
+        public int exp_years { get; set; }
+        public int notice_months { get; set; }
+        public string latest_company { get; set; }
+        public string latest_desg { get; set; }
+        public int curr_sal { get; set; }
+        public int reg_date { get; set; }
+        public int age { get; set; }
+        public string dob { get; set; }
+        public string interview_date { get; set; }
+        public int req_id { get; set; }
     }
+
+
 }

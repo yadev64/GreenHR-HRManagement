@@ -55,20 +55,20 @@
                         </HeaderTemplate>
                         <ItemTemplate>
                              <tr>
-                                <td> <%# Eval("desg") %> </td>
-                                <td> <%# Eval("appl_id") %> </td>
-                                 <td> <%# Eval("appstatus") %> </td>
-                                 <td> <%# Eval("dateapp") %> </td>
+                                <td> <%# Eval("designation") %> </td>
+                                <td> <%# Eval("application_id") %> </td>
+                                 <td> <%# Eval("application_status") %> </td>
+                                 <td> <%# Eval("date_application") %> </td>
                                  <td> <%# Eval("noof_vacancies") %> </td>
                                  <td>
-                                        <asp:Button ID="details" runat="server" Text="View Details"  CommandArgument='<%#Eval("appl_id")%>'  OnClick="MyBtnHandler"/>
+                                        <asp:Button ID="details" runat="server" Text="View Details"  CommandArgument='<%#Eval("application_id")%>'  OnClick="MyBtnHandler"/>
                                  </td>
                              </tr>
                           
                         </ItemTemplate>    
                       
                     </asp:Repeater>
-                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:GreenHRConnectionString3 %>" SelectCommand="SELECT [desg], [appl_id], [appstatus], [dateapp], [noof_vacancies] FROM [application_table] ORDER BY [dateapp] DESC"></asp:SqlDataSource>
+                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:GreenHR_500ConnectionString4 %>" SelectCommand="SELECT [application_id], [designation], [noof_vacancies], [date_application], [application_status] FROM [application_table] ORDER BY [date_application] DESC"></asp:SqlDataSource>
                 </td>
             </tr>
         </table>

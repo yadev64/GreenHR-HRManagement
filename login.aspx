@@ -28,6 +28,32 @@
         .auto-style1 {
             height: 261px;
         }
+        .auto-style2 {
+            font-family: Montserrat-Bold;
+            font-size: 15px;
+            line-height: 1.5;
+            color: #e0e0e0;
+            width: 100%;
+            height: 50px;
+            border-radius: 25px;
+            background: #30DB1A;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 25px;
+            -webkit-transition: all 0.4s;
+            -o-transition: all 0.4s;
+            -moz-transition: all 0.4s;
+            transition: all 0.4s;
+            position: relative;
+            z-index: 1;
+            left: 0px;
+            top: 0px;
+        }
     </style>
 </head>
 <body>
@@ -41,10 +67,7 @@
 					</div>
 
 					<span class="login100-form-title p-t-20 p-b-45">
-						GreenHR Login
-					</span>
-
-					<div class="wrap-input100 validate-input m-b-10" data-validate = "Username is required">
+						GreenHR Login</span><div class="wrap-input100 validate-input m-b-10" data-validate = "Username is required">
 						&nbsp;<span class="focus-input100"></span><span class="symbol-input100"><i class="fa fa-user"></i></span>
 						<asp:TextBox ID="TextBox1" runat="server" CssClass="input100"></asp:TextBox>
 					</div>
@@ -55,7 +78,7 @@
 					</div>
 
 					<div class="container-login100-form-btn p-t-10">
-						<asp:Button ID="Button1" runat="server" CssClass="login100-form-btn" OnClick="Button1_Click1" Text="Login" />
+						<asp:Button ID="Button1" runat="server" CssClass="auto-style2" OnClick="Button1_Click1" Text="Login" />
 					</div>
 					<br />
 					<div class="auto-style1" style="align-content:center">
@@ -65,7 +88,6 @@
                         <br />
                         <asp:Label ID="Label1" runat="server" ForeColor="Red"></asp:Label>
 					    <br />
-                        <asp:Button ID="Button2" runat="server" CssClass="login100-form-btn" OnClick="Button2_Click" Text="Button" />
 					</div>
 
 					</form>
