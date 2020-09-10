@@ -116,7 +116,7 @@
                 <asp:ButtonField ButtonType="Button" CommandName="CandidateView" Text="Candidate View" />
             </Columns>
         </asp:GridView>
-        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:greenhrConnectionString4 %>" SelectCommand="SELECT [candidate_id], [candidate_name], [skills], [program_language], [request_id], [hired_date] FROM [hiredcandidate_table] ORDER BY [hired_date] DESC"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:GreenHR_500ConnectionString6 %>" SelectCommand="SELECT [candidate_id], [candidate_name], [skills], [program_language], [request_id], [hired_date] FROM [hiredcandidate_table] ORDER BY [hired_date] DESC"></asp:SqlDataSource>
     </form>
 </body>
 </html>

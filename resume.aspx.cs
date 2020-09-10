@@ -75,9 +75,9 @@ namespace WebApplication1
                     filesize = FileUpload1.PostedFile.ContentLength;
 
                     getapplicationid();
-                    FileUpload1.SaveAs(Server.MapPath("~/UploadedResume/") + resume_id + ".pdf");
+                    FileUpload1.SaveAs(Server.MapPath("~/Resume/") + resume_id + ".pdf");
 
-                    resumelink = "UploadedResume/" + resume_id + ".pdf";
+                    resumelink = "Resume/" + resume_id + ".pdf";
                     resumesaved = true;
                     Label3.Text = "";
                 }

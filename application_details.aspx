@@ -267,7 +267,7 @@
                                 <td> <%# Eval("experience_year") %> </td>
                                 <td> <%# Eval("latest_company") %> </td>
                                 <td>
-                                        <asp:Button ID="details" runat="server" Text="View Details"  CommandArgument='<%#Eval("cand_id")%>'  OnClick="MyBtnHandler"/>
+                                        <asp:Button ID="details" runat="server" Text="View Details"  CommandArgument='<%#Eval("candidate_id")%>'  OnClick="MyBtnHandler"/>
                                 </td>
                              </tr>
                         </ItemTemplate>

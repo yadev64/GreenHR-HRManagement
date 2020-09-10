@@ -188,7 +188,7 @@
                     <asp:HyperLinkField DataNavigateUrlFields="pdf_resume" HeaderText="Resume(pdf)" Text="View and Download" />
                 </Columns>
             </asp:GridView>
-            <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:greenhrConnectionString5 %>" SelectCommand="SELECT DISTINCT [resume_id], [candidate_id], [pdf_resume] FROM [resume_table] WHERE ([candidate_id] = @candidate_id)">
+            <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:GreenHR_500ConnectionString6 %>" SelectCommand="SELECT DISTINCT [resume_id], [candidate_id], [pdf_resume] FROM [resume_table] WHERE ([candidate_id] = @candidate_id)">
                 <SelectParameters>
                     <asp:ControlParameter ControlID="Label1" Name="candidate_id" PropertyName="Text" Type="Int32" />
                 </SelectParameters>

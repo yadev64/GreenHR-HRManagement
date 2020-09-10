@@ -65,7 +65,7 @@ namespace WebApplication1
         {
 
         }
-        SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-B0P46V9\SQLEXPRESS;Initial Catalog=greenhr;Integrated Security=True");
+        SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-GAJ57FV\SQLEXPRESS;Initial Catalog=GreenHR_500;Integrated Security=True");
         protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
         {
             candidate cn = new candidate();

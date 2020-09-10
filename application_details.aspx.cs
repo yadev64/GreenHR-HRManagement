@@ -9,7 +9,7 @@ namespace WebApplication1
 {
     public partial class application_details : System.Web.UI.Page
     {
-
+        
         public int appl_id { get; set; }
 
         protected void Page_Load(object sender, EventArgs e)
@@ -20,10 +20,8 @@ namespace WebApplication1
 
         public void MyBtnHandler(object btn, EventArgs e)
         {
-
             Button bt = (Button)btn;
-
-            Response.Redirect("candidate_details.aspx?cand_id=" + bt.CommandArgument.ToString());
+            Response.Redirect("candidate_details.aspx?cand_id=" + bt.CommandArgument.ToString() + "&applid=" + appl_id);
         }
     }
 }

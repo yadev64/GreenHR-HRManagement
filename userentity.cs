@@ -47,7 +47,7 @@ namespace WebApplication1
         public string latest_company { get; set; }
         public string latest_desg { get; set; }
         public int curr_sal { get; set; }
-        public int reg_date { get; set; }
+        public DateTime reg_date { get; set; }
         public int age { get; set; }
         public string dob { get; set; }
         public string interview_date { get; set; }

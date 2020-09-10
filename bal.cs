@@ -215,11 +215,11 @@ namespace WebApplication1
                         cls1.latest_company = dt.Rows[i].ItemArray[10].ToString();
                         cls1.latest_desg =dt.Rows[i].ItemArray[11].ToString();
                         cls1.curr_sal = Convert.ToInt32(dt.Rows[i].ItemArray[12].ToString());
-                        cls1.reg_date = Convert.ToInt32(dt.Rows[i].ItemArray[13].ToString());
+                        cls1.reg_date = Convert.ToDateTime(dt.Rows[i].ItemArray[13].ToString());
                         cls1.age = Convert.ToInt32(dt.Rows[i].ItemArray[14].ToString());
                         cls1.dob = dt.Rows[i].ItemArray[15].ToString();
                         cls1.interview_date = dt.Rows[i].ItemArray[16].ToString();
-                        cls1.req_id = Convert.ToInt32(dt.Rows[i].ItemArray[17].ToString());
+                        //cls1.req_id = Convert.ToInt32(dt.Rows[i].ItemArray[17].ToString());
 
                         ls1.Add(cls1);
                     }

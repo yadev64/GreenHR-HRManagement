@@ -17,6 +17,7 @@ namespace WebApplication1
         protected void Button1_Click(object sender, EventArgs e)
         {
             string k = TextBox1.Text;
+            Label1.Text = k;
             bal bl = new bal();
             List<candpool> ls1 = bl.getrec1(k);
             GridView1.DataSource = ls1;
